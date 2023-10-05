@@ -3,6 +3,7 @@ from pydantic import BaseModel
 from bs4 import BeautifulSoup
 import requests
 from lxml import etree
+import re
 
 
 class Body(BaseModel):
@@ -35,12 +36,17 @@ async def form(body: Body):
     action_url = form_element.get("action")
 
     # Find all hidden input elements within the form
-    hidden_inputs = soup.find_all("form > div:nth-child(1) > div > input[type=hidden]")
-    print(soup.select('[@id="mG61Hd"]/div[1]/div/input[1]'))
-    # Extract the 'name' attributes of hidden inputs
-    hidden_input_names = [input_tag.get("name") for input_tag in hidden_inputs]
+    list_items = form_element.find_all("div", {"role": "listitem"})
+    print(list_items)
+    for item in list_items:
+        child_divs = item.find_all("div", {"data-params": True})
+        for div in child_divs:
+            data_params_value = div["data-params"]
+            entry_match = re.search(r"\[\[([\d]+),", data_params_value)
+            label_match = re.search(r'"([^"]*)"', data_params_value)
+            print(f"Label Text: {label_match.group(1)}, entry: {entry_match.group(1)}")
 
     return {
         "actionURL": action_url,
-        "hiddenInputNames": hidden_input_names,
+        "hiddenInputNames": [],
     }

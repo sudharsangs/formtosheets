@@ -71,7 +71,7 @@ export const Form = () => {
                             onChange={handleFormLinkChange}
                         />
                         <button
-                            className="bg-teal-500 disabled:cursor-not-allowed hover:bg-teal-600 text-white font-bold py-2 px-4 rounded"
+                            className="bg-orange-500 disabled:cursor-not-allowed hover:bg-orange-600 text-white font-bold py-2 px-4 rounded"
                             onClick={handleGenerateCode}
                             disabled={!isValidURL}
                         >
@@ -102,7 +102,7 @@ export const Form = () => {
 
                 <div className="code-container mt-4 bg-gray-100 p-4 rounded-lg relative">
                     <button
-                        className="bg-teal-500 hover:bg-teal-600 text-white font-bold py-2 px-4 rounded absolute top-2 right-2"
+                        className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded absolute top-2 right-2"
                     >
                         <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-clipboard-list" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
                             <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>

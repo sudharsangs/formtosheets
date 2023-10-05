@@ -15,8 +15,8 @@ export default function Home() {
               <Image alt="illustration" height={400} width={400} src={"/forms.svg"} />
             </div>
             <div className="p-4 mt-4">
-              <h1 className="md:text-5xl text-4xl font-semibold leading-normal">Elevate Your Web Projects with <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600">form2sheets</span></h1>
-              <p className="mt-3 sm:text-lg text-md text-gray-300">Fed up with manual data management for your Google Forms? Step into the future of seamless integration with form2sheets, your gateway to turning Google Forms into integral components of your website.</p>
+              <h1 className="md:text-5xl text-4xl font-semibold leading-normal">Elevate Your Web Projects with <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600">form2Sheets</span></h1>
+              <p className="mt-3 sm:text-lg text-md text-gray-300">Fed up with manual data management for your HTML Forms? Step into the future of seamless integration with form2sheets, your gateway to turning Google Forms into integral components of your website.</p>
             </div>
 
           </div>
@@ -56,16 +56,17 @@ export default function Home() {
           <div className="flex flex-col p-4 mt-4">
             <h2 className="md:text-3xl text-2xl font-semibold leading-normal">How it works</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-4">
-              <div className="bg-slate-50 shadow-xl ring-1 ring-gray-900/5 p-6 rounded-lg flex flex-col items-center">
+               <div className="bg-slate-50 shadow-xl ring-1 ring-gray-900/5 p-6 rounded-lg flex flex-col items-center">
                 <Image src={"/one.png"} alt={"one"} width={65} height={65} />
-                <h3 className="text-xl font-semibold text-slate-700 mb-4">Paste your Google Form link</h3>
-                <p className="text-gray-700 mb-4">Simply paste your Google Form link into the form2sheets tool.</p>
+                <h3 className="text-xl font-semibold text-slate-700 mb-4"> Create a Form on forms.google.com</h3>
+                <p className="text-gray-700 mb-4">Add all the fields required to your google form and copy the URL.</p>
               </div>
               <div className="bg-slate-50 shadow-xl ring-1 ring-gray-900/5 p-6 rounded-lg flex flex-col items-center">
                 <Image src={"/two.png"} alt={"one"} width={65} height={65} />
-                <h3 className="text-xl font-semibold text-slate-700 mb-4"> Tailor the form's appearance</h3>
-                <p className="text-gray-700 mb-4">Tailor the form's appearance and behavior to seamlessly match your website's style and function (if desired).</p>
+                <h3 className="text-xl font-semibold text-slate-700 mb-4">Paste your Google Form link</h3>
+                <p className="text-gray-700 mb-4">Simply paste your Google Form link into the form2sheets tool.</p>
               </div>
+             
               <div className="bg-slate-50 shadow-xl ring-1 ring-gray-900/5 p-6 rounded-lg flex flex-col items-center">
                 <Image src={"/three.png"} alt={"one"} width={65} height={65} />
                 <h3 className="text-xl font-semibold text-slate-700 mb-4">Generate the HTML code</h3>
