@@ -57,10 +57,10 @@ export const Form = () => {
                         Ready to Make Google Forms Part of Your Website?
                     </h2>
                     <p className="mt-3 sm:text-lg text-md text-gray-300">
-                        Begin your journey with form2sheets today and empower your website with seamless form integration. Bid farewell to manual data entry, and say hello to forms that effortlessly become a part of your site's core functionality.
+                        Begin your journey with form2sheets today and empower your website with seamless form integration. Bid farewell to manual data entry, and say hello to forms that effortlessly become a part of your site&apos;s core functionality.
                     </p>
                     <p className="mt-3 sm:text-lg text-md text-gray-300">
-                        Don't wait – turn your Google Forms into powerful site tools with form2sheets!
+                        Don&apos;t wait – turn your Google Forms into powerful site tools with form2sheets!
                     </p>
                     <div className="flex flex-col sm:flex-row items-center mt-2 w-full gap-2">
                         <input

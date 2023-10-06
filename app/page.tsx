@@ -23,7 +23,7 @@ export default function Home() {
         </section>
         <section id="why-choose-us">
           <div className="flex flex-col p-4 mt-4">
-            <h2 className="md:text-3xl text-2xl font-semibold leading-normal">Why Choose form2sheets for Your Site's Forms?</h2>
+            <h2 className="md:text-3xl text-2xl font-semibold leading-normal">Why Choose form2sheets for Your Site&apos;s Forms?</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-4">
               <div className="bg-slate-50 shadow-xl ring-1 ring-gray-900/5  p-6 rounded-lg">
                 <h3 className="text-xl font-semibold text-slate-700 mb-4">Real-Time Data Integration 🚀 </h3>
@@ -31,7 +31,7 @@ export default function Home() {
               </div>
               <div className="bg-slate-50 shadow-xl ring-1 ring-gray-900/5  p-6 rounded-lg">
                 <h3 className="text-xl font-semibold text-slate-700 mb-4">Seamless Website Integration 🌐 </h3>
-                <p className="text-gray-700 mb-4">Craft and customize the HTML code to ensure your forms harmonize perfectly with your website's design and functionality.</p>
+                <p className="text-gray-700 mb-4">Craft and customize the HTML code to ensure your forms harmonize perfectly with your website&apos;s design and functionality.</p>
               </div>
               <div className="bg-slate-50 shadow-xl ring-1 ring-gray-900/5  p-6 rounded-lg">
                 <h3 className="text-xl font-semibold text-slate-700 mb-4"> Automated Data Sync 📈</h3>
@@ -43,7 +43,7 @@ export default function Home() {
               </div>
               <div className="bg-slate-50 shadow-xl ring-1 ring-gray-900/5  p-6 rounded-lg">
                 <h3 className="text-xl font-semibold text-slate-700 mb-4">Security Assured 🔒</h3>
-                <p className="text-gray-700 mb-4">Trust in the robust security of Google's infrastructure to safeguard your data.</p>
+                <p className="text-gray-700 mb-4">Trust in the robust security of Google&apos;s infrastructure to safeguard your data.</p>
               </div>
               <div className="bg-slate-50 shadow-xl ring-1 ring-gray-900/5  p-6 rounded-lg">
                 <h3 className="text-xl font-semibold text-slate-700 mb-4">Streamlined Workflow 🎯</h3>
@@ -58,8 +58,8 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-4">
                <div className="bg-slate-50 shadow-xl ring-1 ring-gray-900/5 p-6 rounded-lg flex flex-col items-center">
                 <Image src={"/one.png"} alt={"one"} width={65} height={65} />
-                <h3 className="text-xl font-semibold text-slate-700 mb-4"> Create a Form on forms.google.com</h3>
-                <p className="text-gray-700 mb-4">Add all the fields required to your google form and copy the URL.</p>
+                <h3 className="text-xl font-semibold text-slate-700 mb-4"> Create a Google Form</h3>
+                <p className="text-gray-700 mb-4">Visit forms.google.com to design your form with all necessary fields, and then copy the URL for sharing.</p>
               </div>
               <div className="bg-slate-50 shadow-xl ring-1 ring-gray-900/5 p-6 rounded-lg flex flex-col items-center">
                 <Image src={"/two.png"} alt={"one"} width={65} height={65} />
