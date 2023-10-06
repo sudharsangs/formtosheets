@@ -12,6 +12,18 @@ class Body(BaseModel):
 
 app = FastAPI()
 
+def extract_numbers_and_strings(data):
+    numbers_and_strings = []
+    for item in data:
+        if isinstance(item, int):
+            numbers_and_strings.append(item)
+        elif isinstance(item, str):
+            numbers_and_strings.append(item)
+        elif isinstance(item, list):
+            numbers_and_strings.extend(extract_numbers_and_strings(item))
+    return numbers_and_strings
+
+
 
 @app.post("/api/v1/form")
 async def form(body: Body):
@@ -23,30 +35,28 @@ async def form(body: Body):
         return {"error": "Failed to fetch the Google Forms page"}
 
     # Parse the HTML using BeautifulSoup
-    soup = BeautifulSoup(response.text, "lxml")
+    soup = BeautifulSoup(response.text, 'html.parser')
     dom = etree.HTML(str(soup))
 
-    # Find the form element by matching the action attribute
-    form_element = soup.find("form")
+    script_element = soup.find('script', {'type': 'text/javascript'})
+    script_content = script_element.string
 
-    if not form_element:
-        return {"error": "Form element not found"}
+    match = re.search(r"var FB_PUBLIC_LOAD_DATA_ = (\[.*?\]);", script_content, re.DOTALL)
 
-    # Extract the 'action' attribute of the form element
-    action_url = form_element.get("action")
+    if match:
+        # Extract the JSON array and parse it
+        js_array_str = match.group(1)
+        js_array_data = json.loads(js_array_str)
 
-    # Find all hidden input elements within the form
-    list_items = form_element.find_all("div", {"role": "listitem"})
-    print(list_items)
-    for item in list_items:
-        child_divs = item.find_all("div", {"data-params": True})
-        for div in child_divs:
-            data_params_value = div["data-params"]
-            entry_match = re.search(r"\[\[([\d]+),", data_params_value)
-            label_match = re.search(r'"([^"]*)"', data_params_value)
-            print(f"Label Text: {label_match.group(1)}, entry: {entry_match.group(1)}")
+        # Iterate through the array and extract all numbers and strings, including nested ones
+        all_numbers_and_strings = extract_numbers_and_strings(js_array_data)
+
+        # Print all extracted numbers and strings
+        for item in all_numbers_and_strings:
+            print(item)
+
 
     return {
-        "actionURL": action_url,
+        "actionURL": "",
         "hiddenInputNames": [],
     }
